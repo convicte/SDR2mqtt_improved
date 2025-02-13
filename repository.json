@@ -1,5 +1,5 @@
 {
-  "name": "Home Assistant Add-ons: Slacker Labs",
-  "url": "https://github.com/thejeffreystone/hassio-addons",
-  "maintainer": "Jeffrey Stone"
+  "name": "Home Assistant Add-ons: Convicte",
+  "url": "https://github.com/convicte/SDR2mqtt_improved",
+  "maintainer": "Convicte"
 }
