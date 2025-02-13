@@ -248,6 +248,7 @@ mappings = {
         "object_suffix": "WS",
         "config": {
             "device_class": "wind_speed",
+            "state_class":"measurement",
             "name": "Wind Speed",
             "unit_of_measurement": "km/h",
             "value_template": "{{ value|float }}"
@@ -283,6 +284,7 @@ mappings = {
         "object_suffix": "WS",
         "config": {
             "device_class": "wind_speed",
+            "state_class":"measurement",
             "name": "Wind Speed",
             "unit_of_measurement": "km/h",
             "value_template": "{{ float(value|float) * 3.6 }}"
@@ -293,9 +295,9 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "GS",
         "config": {
-            "name": "Gust Speed",
             "device_class": "wind_speed",
             "state_class":"measurement",
+            "name": "Gust Speed",
             "unit_of_measurement": "km/h",
             "value_template": "{{ value|float }}"
         }
@@ -341,6 +343,7 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "WD",
         "config": {
+            "state_class":"measurement",
             "name": "Wind Direction",
             "unit_of_measurement": "°",
             "value_template": "{{ value|float }}"
@@ -493,6 +496,7 @@ mappings = {
         "object_suffix": "light_klx",
         "config": {
             "device_class": "illuminance",
+            "state_class":"measurement",
             "name": "Outside Luminancee",
             "unit_of_measurement": "lux",
             "value_template": "{{ value|int }}"
@@ -552,6 +556,7 @@ mappings = {
         "object_suffix": "meter",
         "config": {
             "device_class": "gas",
+            "state_class":"total_increasing",
             "name": "meter",
             "unit_of_measurement": "ft³",
             "value_template": "{{ value|float }}"
