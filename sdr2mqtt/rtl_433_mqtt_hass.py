@@ -165,6 +165,7 @@ mappings = {
         "object_suffix": "B",
         "config": {
             "device_class": "battery",
+            "state_class":"measurement",
             "name": "Battery",
             "unit_of_measurement": "%",
             "value_template": "{{ float(value) * 99 + 1 | int }}"
@@ -307,9 +308,9 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "GS",
         "config": {
-            "name": "Wind max",
             "device_class": "wind_speed",
             "state_class":"measurement",
+            "name": "Wind max",
             "unit_of_measurement": "km/h",
             "value_template": "{{ value|float }}"
         }
@@ -551,6 +552,7 @@ mappings = {
         }
     
     },
+
     "consumption": {
         "device_type": "meter",
         "object_suffix": "meter",
@@ -562,6 +564,7 @@ mappings = {
             "value_template": "{{ value|float }}"
         }
     },
+
     "strike_count": {
         "device_type": "sensor",
         "object_suffix": "strcnt",
@@ -569,6 +572,102 @@ mappings = {
             "name": "Lightning Strike Count",
             "state_class":"total_increasing",
             "value_template": "{{ value|int }}"
+
+        }
+    },
+
+    "co2_ppm": {
+        "device_type": "sensor",
+        "object_suffix": "CO2",
+        "config": {
+            "device_class": "carbon_dioxide",
+            "state_class":"measurement",
+            "name": "Carbon Dioxide",
+            "unit_of_measurement": "ppm",
+            "value_template": "{{ value|int }}"
+        }
+    },
+
+    "pm2_5_ug_m3": {
+        "device_type": "sensor",
+        "object_suffix": "PM25",
+        "config": {
+            "device_class": "PM25",
+            "state_class":"measurement",
+            "name": "PM 2.5",
+            "unit_of_measurement": "µg/m³",
+            "value_template": "{{ value|int }}"
+        }
+    },
+
+    "estimated_pm2_5_ug_m3": {
+        "device_type": "sensor",
+        "object_suffix": "PM25",
+        "config": {
+            "device_class": "PM25",
+            "state_class":"measurement",
+            "name": "PM 2.5",
+            "unit_of_measurement": "µg/m³",
+            "value_template": "{{ value|int }}"
+        }
+    },
+
+    "pm10_0_ug_m3": {
+        "device_type": "sensor",
+        "object_suffix": "PM10",
+        "config": {
+            "device_class": "PM10",
+            "state_class":"measurement",
+            "name": "PM 10",
+            "unit_of_measurement": "µg/m³",
+            "value_template": "{{ value|int }}"
+        }
+    },
+
+    "estimated_pm10_0_ug_m3": {
+        "device_type": "sensor",
+        "object_suffix": "PM10",
+        "config": {
+            "device_class": "PM10",
+            "state_class":"measurement",
+            "name": "Estimated PM 10",
+            "unit_of_measurement": "µg/m³",
+            "value_template": "{{ value|int }}"
+        }
+    },
+
+    "pm10_ug_m3": {
+        "device_type": "sensor",
+        "object_suffix": "PM10",
+        "config": {
+            "device_class": "PM10",
+            "state_class":"measurement",
+            "name": "PM 10",
+            "unit_of_measurement": "µg/m³",
+            "value_template": "{{ value|int }}"
+        }
+    },
+
+    "estimated_pm10_ug_m3": {
+        "device_type": "sensor",
+        "object_suffix": "PM10",
+        "config": {
+            "device_class": "PM10",
+            "state_class":"measurement",
+            "name": "Estimated PM 10",
+            "unit_of_measurement": "µg/m³",
+            "value_template": "{{ value|int }}"
+        }
+    },
+
+    "ext_power": {
+        "device_type": "binary_sensor",
+        "object_suffix": "plug",
+        "config": {
+            "device_class": "plug",
+            "force_update": "true",
+            "payload_on": "1",
+            "payload_off": "0"
         }
     },
 }
