@@ -344,6 +344,7 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "WD",
         "config": {
+            "device_class": "wind_direction",
             "state_class":"measurement",
             "name": "Wind Direction",
             "unit_of_measurement": "°",
